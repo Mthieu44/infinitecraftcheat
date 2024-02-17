@@ -41,8 +41,7 @@ def exe():
     mouse.wipe_and_write("")
     currListe.export_to_json("liste.json")
     act.export_to_json("crafts.json")
-    time.sleep(5)
-
 
 for i in range(2):
     exe()
+    time.sleep(5)
