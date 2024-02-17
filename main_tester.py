@@ -14,8 +14,6 @@ ListeObjets([
 
 ListeCrafts().export_to_json("crafts.json")
 
-time.sleep(5)
-
 
 def get_crafts_todo(liste: ListeObjets, act: ListeCrafts):
     l = []
@@ -43,5 +41,5 @@ def exe():
     act.export_to_json("crafts.json")
 
 for i in range(2):
-    exe()
     time.sleep(5)
+    exe()

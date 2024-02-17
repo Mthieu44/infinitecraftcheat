@@ -27,6 +27,6 @@ def create_new_object(s1: str, s2: str) -> str:
     move_to_objet()
     drag_object()
     time.sleep(0.4)
-    t = extract_text(1320, 270, 200, 70)
+    t = extract_text(1330, 290, 200, 30, s1+s2)
     pa.rightClick()
     return t
