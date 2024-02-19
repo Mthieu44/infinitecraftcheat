@@ -4,12 +4,12 @@ import time
 
 
 def move_to_objet():
-    pa.moveTo(1620, 130)
+    pa.moveTo(1400, 200)
 
 
 def drag_object():
     pa.mouseDown()
-    pa.moveTo(1400, 300, duration=0.2)
+    pa.moveTo(900, 400, duration=0.2)
     pa.mouseUp()
 
 
@@ -27,6 +27,6 @@ def create_new_object(s1: str, s2: str) -> str:
     move_to_objet()
     drag_object()
     time.sleep(0.4)
-    t = extract_text(1330, 290, 200, 30, s1+s2)
+    t = extract_text(680, 350, 450, 150, s1+s2)
     pa.rightClick()
     return t

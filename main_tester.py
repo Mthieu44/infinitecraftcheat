@@ -5,6 +5,7 @@ import pyautogui as pa
 import time
 import mouse
 
+"""
 ListeObjets([
     Objet("Water"),
     Objet("Fire"),
@@ -12,7 +13,7 @@ ListeObjets([
     Objet("Earth"),
 ]).export_to_json("liste.json")
 
-ListeCrafts().export_to_json("crafts.json")
+ListeCrafts().export_to_json("crafts.json")"""
 
 
 def get_crafts_todo(liste: ListeObjets, act: ListeCrafts):
@@ -29,13 +30,12 @@ def exe():
     currListe.import_from_json("liste.json")
     act = ListeCrafts()
     act.import_from_json("crafts.json")
-    pa.moveTo(1620, 1050)
+    pa.moveTo(1400, 1000)
     pa.click()
     for m1, m2 in get_crafts_todo(currListe, act):
         t = mouse.create_new_object(m1, m2)
         currListe.ajouter(t, m1, m2)
         act.ajouter(Craft(m1, m2, t))
-
     mouse.wipe_and_write("")
     currListe.export_to_json("liste.json")
     act.export_to_json("crafts.json")
